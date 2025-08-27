@@ -1,6 +1,6 @@
 import { memo, useEffect, useState } from "react";
 import axios from "axios";
-import "./products.scss";
+import "./Products.scss";
 import Container from "../Container/Container";
 
 const Products = () => {
