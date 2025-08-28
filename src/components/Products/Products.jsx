@@ -2,13 +2,14 @@ import { memo, useEffect, useState } from "react";
 import axios from "axios";
 import "./Products.scss";
 import Container from "../Container/Container";
+import { API } from "./../../utils/index";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
     axios
-      .get("https://dummyjson.com/products?limit=12")
+      .get(`${API}products?limit=12`)
       .then((res) => setProducts(res.data.products))
       .catch((err) => console.error(err));
   }, []);

@@ -3,7 +3,7 @@ import axios from "axios";
 import Container from "../Container/Container";
 import { OrbitProgress } from "react-loading-indicators";
 import "./Users.scss";
-import { API } from "../../utils"; // same style as your Posts
+import { API } from "../../utils"; 
 
 const Users = () => {
   const [users, setUsers] = useState([]);
@@ -13,7 +13,7 @@ const Users = () => {
   const getUsers = async () => {
     try {
       setLoading(true);
-      const response = await axios.get(`${API}users?limit=10`);
+      const response = await axios.get(`${API}users?limit=12`);
       setUsers(response.data.users);
     } catch (err) {
       setError(err.message);
